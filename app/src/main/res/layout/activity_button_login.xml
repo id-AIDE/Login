@@ -16,9 +16,10 @@
         android:text="hello" />
 
     <Button
+    android:layout_marginTop="400dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/exitTextBtn"
-    android:gravity="center"
+    android:layout_gravity="start"
     android:id="@+id/exitBtn"></Button>
 </LinearLayout>
