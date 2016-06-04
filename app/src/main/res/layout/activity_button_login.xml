@@ -15,11 +15,36 @@
         android:layout_height="wrap_content"
         android:text="hello" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="user"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="password"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pw"/>
+
     <Button
-    android:layout_marginTop="400dp"
+    android:layout_marginTop="200dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/exitTextBtn"
     android:layout_gravity="start"
     android:id="@+id/exitBtn"></Button>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="tampilkan"
+        android:id="@+id/tampilkan"
+        />
 </LinearLayout>

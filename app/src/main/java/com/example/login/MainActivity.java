@@ -1,7 +1,9 @@
 package com.example.login;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +27,14 @@ EditText user,pass;
         pass = (EditText)findViewById(R.id.password);
         Button submit = (Button)findViewById(R.id.ButtonLogin);
         submit.setOnClickListener(new click());
+
+
+//        SharedPreferences sp = getSharedPreferences("username", MODE_PRIVATE);
+//        String nama = sp.getString("login","");
+//        if ((nama.equals("sukses"))&&(nama!=null)){
+//            startActivity(new Intent(getApplicationContext(), ButtonLogin.class));
+//        }
+
     }
     class click implements Button.OnClickListener{
 
@@ -36,6 +46,13 @@ EditText user,pass;
             {
                 Toast.makeText(getApplicationContext(),"selamat datang", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(getApplicationContext(), ButtonLogin.class));
+
+                SharedPreferences sp = getSharedPreferences("username", MODE_PRIVATE);
+                SharedPreferences.Editor ed = sp.edit();
+                ed.putString("nama", nama);
+                ed.putString("pasw", pasw);
+                ed.commit();
+
             }
             else
                 Toast.makeText(getApplicationContext(),"login anda salah", Toast.LENGTH_SHORT).show();
